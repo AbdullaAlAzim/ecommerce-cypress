@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-09-30T08:23:09.688Z",
+    "end": "2023-09-30T08:23:17.026Z",
+    "duration": 7338,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "874929fd-b6af-4f62-a9e8-f9d543d322ef",
+      "title": "",
+      "fullFile": "cypress\\e2e\\testcases\\loginTest.cy.js",
+      "file": "cypress\\e2e\\testcases\\loginTest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "675bb37e-359f-490e-849d-492b3f7549a0",
+          "title": "Login form Test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should successfully register with valid credentials",
+              "fullTitle": "Login form Test should successfully register with valid credentials",
+              "timedOut": null,
+              "duration": 4353,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginObj.openURL();\nloginObj.enterEmail(_loginData.default.loginWithValidData.email);\nloginObj.enterPassword(_loginData.default.loginWithValidData.password);\nloginObj.clickOnContinue();\ncy.get('.topic-block-title > h2').should('have.text', 'Welcome to our store');",
+              "err": {},
+              "uuid": "8fd933e6-ca48-4fd8-9a4c-0541d2cb9e56",
+              "parentUUID": "675bb37e-359f-490e-849d-492b3f7549a0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should display error message for invalid credentials",
+              "fullTitle": "Login form Test should display error message for invalid credentials",
+              "timedOut": null,
+              "duration": 2632,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginObj.openURL();\nloginObj.enterEmail(_loginData.default.loginWithinValidData.email);\nloginObj.enterPassword(_loginData.default.loginWithinValidData.password);\nloginObj.clickOnContinue();\ncy.get('.message-error').should('contain', 'Login was unsuccessful. Please correct the errors');",
+              "err": {},
+              "uuid": "e4f9736d-c572-4973-826b-5b8ecac5faaf",
+              "parentUUID": "675bb37e-359f-490e-849d-492b3f7549a0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8fd933e6-ca48-4fd8-9a4c-0541d2cb9e56",
+            "e4f9736d-c572-4973-826b-5b8ecac5faaf"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 6985,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress\\reports\\html\\.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
