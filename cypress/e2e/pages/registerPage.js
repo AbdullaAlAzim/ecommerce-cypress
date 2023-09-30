@@ -13,6 +13,7 @@ export class registerPage {
     confirm_pass: "#ConfirmPassword",
     registerButton: "#register-button",
     result: ".result",
+    error:".message-error > ul > li"
   };
 
   openURL() {
@@ -65,8 +66,16 @@ export class registerPage {
   }
 
   verifySuccessRegistration() {
-    return cy
+    cy
       .get(this.weblocators.result)
       .should("have.text", "Your registration completed");
   }
+
+
+    verifySuccessRegistration() {
+    cy
+      .get(this.weblocators.error)
+      .should("have.text", "The specified email already exists");
+  }
+
 }
