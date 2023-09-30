@@ -19,6 +19,7 @@ weblocators = {
   enterPassword(password) {
     cy.get(this.weblocators.password).type(password);
   }
+  
   clickOnContinue() {
     cy.get(this.weblocators.loginButton).click();
   }
