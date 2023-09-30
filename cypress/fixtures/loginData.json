@@ -1,0 +1,18 @@
+
+{
+  "loginWithValidData":  {
+    
+    "email":"rashedrion7789@gmail.com",    
+    "password":"rion12347"   
+    
+    },
+
+    "loginWithinValidData": {
+     "email":"rashedrion@gmail.com",    
+    "password":"rion1234700"   
+
+    }
+
+}
+  
+  
