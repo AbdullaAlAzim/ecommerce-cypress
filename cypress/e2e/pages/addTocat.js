@@ -12,6 +12,7 @@ weblocators = {
   
   AddtoCart() {
     
+    
     cy.get(this.weblocators.addTocat).click();
     cy.get(this.weblocators.ram).select('2 GB');
     cy.get(this.weblocators.hdd).check();
