@@ -4,7 +4,7 @@
   "description": "cypress ecommerce automation",
   "main": "index.js",
   "scripts": {
-    "test:addToCart": "npx cypress run --spec cypress/e2e/testcases/addToCartTest.cy.js",
+    "test:addToCart": "npx cypress run --spec cypress/e2e/testcases/addTocartTest.cy.js",
     "test:loginTest": "npx cypress run --spec cypress/e2e/testcases/loginTest.cy.js",
     "test:registerTest": "npx cypress run --spec cypress/e2e/testcases/registerTest.cy.js",
     "test:searchTest": "npx cypress run --spec cypress/e2e/testcases/searchTest.cy.js",
