@@ -18,7 +18,7 @@ jobs:
           name: Mocha HTML Report Add to Cart
           path: cypress/reports/html
 
-  Login-test-run:
+  loginTest-run:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
@@ -29,16 +29,15 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           command: npm run test:loginTest
-
       - name: Cypress Test Report            
         uses: actions/upload-artifact@v3
         with:
-          name: Mocha HTML Report register
+          name: Mocha HTML Report Login Test
           path: cypress/reports/html
 
-  Register-test-run:
-     runs-on: ubuntu-22.04
-     steps:
+  registerTest-run:
+    runs-on: ubuntu-22.04
+    steps:
       - name: Checkout
         uses: actions/checkout@v4
       # Install npm dependencies, cache them correctly
@@ -47,16 +46,15 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           command: npm run test:registerTest
-
       - name: Cypress Test Report            
         uses: actions/upload-artifact@v3
         with:
-          name: Mocha HTML Report register
+          name: Mocha HTML Report Register Test
           path: cypress/reports/html
 
-  SearchTest-test-run:
-     runs-on: ubuntu-22.04
-     steps:
+  searchTest-run:
+    runs-on: ubuntu-22.04
+    steps:
       - name: Checkout
         uses: actions/checkout@v4
       # Install npm dependencies, cache them correctly
@@ -65,12 +63,13 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           command: npm run test:searchTest
-
       - name: Cypress Test Report            
         uses: actions/upload-artifact@v3
         with:
-          name: Mocha HTML Report register
+          name: Mocha HTML Report Search Test
           path: cypress/reports/html
+
+
 
 
 
